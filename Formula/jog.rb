@@ -1,26 +1,26 @@
 class Jog < Formula
   desc "Memory for your working tree - automatic git snapshots, jj-style"
   homepage "https://github.com/tyler-johnson/jog"
-  version "0.1.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tyler-johnson/jog/releases/download/v0.1.0/jog_0.1.0_darwin_arm64.tar.gz"
-      sha256 "6c59b7acf9abc2ebadc298b64c50382b86fbba07da55fb42cad5ef579a1adbde"
+      url "https://github.com/tyler-johnson/jog/releases/download/v1.0.0/jog_1.0.0_darwin_arm64.tar.gz"
+      sha256 "2e23da50699214d4d6826bf4889717020392fccde85c1fdf23fcfdd003c0708a"
     else
-      url "https://github.com/tyler-johnson/jog/releases/download/v0.1.0/jog_0.1.0_darwin_amd64.tar.gz"
-      sha256 "f60d3b80f5f9fe9149a06a28c2cd39cc9b5257abf72e50a04a9b01c3b8bd1815"
+      url "https://github.com/tyler-johnson/jog/releases/download/v1.0.0/jog_1.0.0_darwin_amd64.tar.gz"
+      sha256 "08489dc5e46ba8fb8cc1a7a3faef30446284579585392db4b12b5d63160b6249"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/tyler-johnson/jog/releases/download/v0.1.0/jog_0.1.0_linux_arm64.tar.gz"
-      sha256 "1fd8c18c462fd2dca1e3eb08c5f2876e366e90698afe0ee8502a89b953adfee8"
+      url "https://github.com/tyler-johnson/jog/releases/download/v1.0.0/jog_1.0.0_linux_arm64.tar.gz"
+      sha256 "b36129a95ba63672cf00d8bb0502ff278b6e0f66774df0eb052da5a7eb01ebaa"
     else
-      url "https://github.com/tyler-johnson/jog/releases/download/v0.1.0/jog_0.1.0_linux_amd64.tar.gz"
-      sha256 "db1a4b7e7e38c5bd82bb60ead7426c3a76dff23e0541182c605497dde3c6570c"
+      url "https://github.com/tyler-johnson/jog/releases/download/v1.0.0/jog_1.0.0_linux_amd64.tar.gz"
+      sha256 "a8b9713f228dd5df7156e8b52d02b911ff47643b09e9d3a988653cef1f25f085"
     end
   end
 
