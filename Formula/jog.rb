@@ -5,21 +5,21 @@
 class Jog < Formula
   desc "Memory for your working tree - automatic git snapshots, jj-style"
   homepage "https://github.com/tyler-johnson/jog"
-  version "1.2.2"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tyler-johnson/jog/releases/download/v1.2.2/jog_1.2.2_darwin_amd64.tar.gz"
-      sha256 "7f462a368498859804814aa4e1749d7e46a6543f7dd2ec1ec422a9426f8cf05c"
+      url "https://github.com/tyler-johnson/jog/releases/download/v1.3.0/jog_1.3.0_darwin_amd64.tar.gz"
+      sha256 "3c11c8fbeafb9b776057337c38fe34ef724e6e4dd0bbdb7f58947ebbe34622a9"
 
       define_method(:install) do
         bin.install "jog"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tyler-johnson/jog/releases/download/v1.2.2/jog_1.2.2_darwin_arm64.tar.gz"
-      sha256 "67e26277ecf393e8f11a9fab001d8a3f3dce699e70d70e844b2a706b76042f7d"
+      url "https://github.com/tyler-johnson/jog/releases/download/v1.3.0/jog_1.3.0_darwin_arm64.tar.gz"
+      sha256 "f174151ab3c0a5296f119b0cad2525b811ea3ea77b7c016b538dec854cd02285"
 
       define_method(:install) do
         bin.install "jog"
@@ -29,15 +29,15 @@ class Jog < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tyler-johnson/jog/releases/download/v1.2.2/jog_1.2.2_linux_amd64.tar.gz"
-      sha256 "cf6266393bb13210ca3fb0078691b2717e96fb7ede96f26bdf069ac44726f348"
+      url "https://github.com/tyler-johnson/jog/releases/download/v1.3.0/jog_1.3.0_linux_amd64.tar.gz"
+      sha256 "0e6de13133ec33933f878e6fe1c4b3c249a28eb67be6ff0e49a3b717ae985547"
       define_method(:install) do
         bin.install "jog"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tyler-johnson/jog/releases/download/v1.2.2/jog_1.2.2_linux_arm64.tar.gz"
-      sha256 "1f411f10c5fd04eaae18b4e2c7342b196fac097cd2fd9aa267a177f18ea870a7"
+      url "https://github.com/tyler-johnson/jog/releases/download/v1.3.0/jog_1.3.0_linux_arm64.tar.gz"
+      sha256 "32ec23c21d85262545564f38a017a7f2634c105fe98ea204f53a71d40e5eefe4"
       define_method(:install) do
         bin.install "jog"
       end
