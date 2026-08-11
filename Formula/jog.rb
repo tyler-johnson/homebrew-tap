@@ -5,21 +5,21 @@
 class Jog < Formula
   desc "Memory for your working tree - automatic git snapshots, jj-style"
   homepage "https://github.com/tyler-johnson/jog"
-  version "1.5.1"
+  version "1.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tyler-johnson/jog/releases/download/v1.5.1/jog_1.5.1_darwin_amd64.tar.gz"
-      sha256 "501a551505c0258c07e641d5f2ac3a0a2f6fd8e23df05bac4ccf357cd952ad2e"
+      url "https://github.com/tyler-johnson/jog/releases/download/v1.6.0/jog_1.6.0_darwin_amd64.tar.gz"
+      sha256 "92d8a7acf2202ccad353072655abd2ab37e4c8fd73fa26bfd6a17aa9c4e6e56d"
 
       define_method(:install) do
         bin.install "jog"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tyler-johnson/jog/releases/download/v1.5.1/jog_1.5.1_darwin_arm64.tar.gz"
-      sha256 "1009ba828701646e807bfd0b57eea7dfd2bc479b899e4eb939b6cc62adc2fce3"
+      url "https://github.com/tyler-johnson/jog/releases/download/v1.6.0/jog_1.6.0_darwin_arm64.tar.gz"
+      sha256 "7f8f39c438f43a5b8c34db2b4f56462545d19c4717ad6c30288ee1404edd03aa"
 
       define_method(:install) do
         bin.install "jog"
@@ -29,15 +29,15 @@ class Jog < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tyler-johnson/jog/releases/download/v1.5.1/jog_1.5.1_linux_amd64.tar.gz"
-      sha256 "a48266582030dde95860bf08b34b63332fed703328fe30043c820990c0ab178b"
+      url "https://github.com/tyler-johnson/jog/releases/download/v1.6.0/jog_1.6.0_linux_amd64.tar.gz"
+      sha256 "5fa09e5d91992e6b12e5d84c26918c32fadf46f593ca1f37dcf9c3b00ccaef48"
       define_method(:install) do
         bin.install "jog"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tyler-johnson/jog/releases/download/v1.5.1/jog_1.5.1_linux_arm64.tar.gz"
-      sha256 "85ff5b1a48bfbda9f7b3f741cf75376db4a311571ea8a0f53ebf90a2e220784f"
+      url "https://github.com/tyler-johnson/jog/releases/download/v1.6.0/jog_1.6.0_linux_arm64.tar.gz"
+      sha256 "ef0703bc539051c410d7a6e3dd4d24452194ad4196a4e895d270b686cfee5b74"
       define_method(:install) do
         bin.install "jog"
       end
@@ -48,11 +48,10 @@ class Jog < Formula
     <<~EOS
       jog only snapshots when something invokes it. Wire the triggers:
 
-        1. Shell alias (bash/zsh):  alias git='jog git'
-        2. Agent hooks + skills:    jog agents install
-        3. Editor save hooks:       jog editors install <editor>
+        jog install    # guided: the git alias, agent hooks, editor hooks
 
-      Then verify with:  jog doctor
+      or piece by piece: jog shell install, jog agents install,
+      jog editors install <editor>. Then verify with:  jog doctor
     EOS
   end
 
