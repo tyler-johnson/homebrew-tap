@@ -5,28 +5,28 @@
 class Fufu < Formula
   desc "jj's workflow on git's repository - the working tree is the open change"
   homepage "https://github.com/tyler-johnson/fufu"
-  version "0.7.0"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tyler-johnson/fufu/releases/download/v0.7.0/ff_0.7.0_darwin_amd64.tar.gz"
-      sha256 "d3388f94c5147efb604da662c280da3adb7db7b96f473d86bf8316e98514e418"
+      url "https://github.com/tyler-johnson/fufu/releases/download/v0.8.0/ff_0.8.0_darwin_amd64.tar.gz"
+      sha256 "aa0ffe6c01704d5c13fc455b0e39692ef67b4ae3cbf3d965de622dc0bfb247c8"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tyler-johnson/fufu/releases/download/v0.7.0/ff_0.7.0_darwin_arm64.tar.gz"
-      sha256 "de7de9ebbced17bd7a522b6600a66796d017716de115061113cd6c882db0210d"
+      url "https://github.com/tyler-johnson/fufu/releases/download/v0.8.0/ff_0.8.0_darwin_arm64.tar.gz"
+      sha256 "fbb78209abfc3cc87b7b19065d5586b79fad59431a60fb0e21bdd8eed734c5ff"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tyler-johnson/fufu/releases/download/v0.7.0/ff_0.7.0_linux_amd64.tar.gz"
-      sha256 "784af6d889ca463a607ad195cc983f09cc281e42853a410b88e517dfd19e65c0"
+      url "https://github.com/tyler-johnson/fufu/releases/download/v0.8.0/ff_0.8.0_linux_amd64.tar.gz"
+      sha256 "04fcbca62a0c2cd2b47933b7fb9f6c562828800f8d414d61adc194fd85f6d971"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tyler-johnson/fufu/releases/download/v0.7.0/ff_0.7.0_linux_arm64.tar.gz"
-      sha256 "dd81c30fd0cf34923175bb0168be62032b341d445f5eb5b898e802af29abeff4"
+      url "https://github.com/tyler-johnson/fufu/releases/download/v0.8.0/ff_0.8.0_linux_arm64.tar.gz"
+      sha256 "a6970563cb2e43ee5e4b9d53a2fe2097cb170d036c85e6198431771cbf174290"
     end
   end
 
